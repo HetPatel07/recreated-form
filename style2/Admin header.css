@@ -1,0 +1,65 @@
+ul#nav1 li
+{
+	list-style:none;
+}
+ul#nav1 li a
+{
+	background:#2c3e50;
+	color:#FFFFFF;
+	display:block;
+	padding:10px;
+	font-size:15px;
+	/*border-bottom:1px solid #0A0A0A;*/
+	-webkit-transition:0.2s;
+	-moz-transition:0.2s;
+	-o-transition:0.2s;
+	transition:0.2s;
+}
+ul#nav1 li a:hover
+{
+	background-color:#2c3e50;
+	color:#FFFFFF;
+	padding-left:30px;
+}
+ul#nav1 li a.selected
+{
+	background-color:#030303;
+	color:#FFFFFF;
+}
+
+.admin
+{
+	color:#FFFFFF;
+	padding-top:10px;
+	padding-right:100px;
+	text-align:right;
+	color:#FFFFFF;
+}
+.main-nav-ul ul
+{
+	display:none;
+}
+.main-nav-ul li.tap ul
+{
+	display:block;
+}
+
+.main-nav-ul ul a:before
+{
+	content:'\203A';
+	margin-right:20px;
+}
+
+.main-nav .sub-arrow:after
+{
+	content:'\203A';
+	float:right;
+	margin-left:20px;
+	transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+}
+.main-nav li.tap .sub-arrow:after
+{
+	content:'\2039';
+}

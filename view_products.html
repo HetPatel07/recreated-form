@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>view product</title>
+	<!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <link href="style/style.css" rel="stylesheet" />
+        <link href="style2/insert_css.css">
+		<!--<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  		<script>tinymce.init({ selector:'textarea' });</script>-->
+        <link rel="stylesheet" href="style2/insert_css.css">
+		<!--<link href="../css/bootstrap.css" rel="stylesheet" type="text/css">-->
+<style> 
+.button
+{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active 
+{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" >Admin Panel</a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li onClick="logout()"><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                   <li>
+                        <a   href="home.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+                   
+                    <li>
+                                <a  href="insert_product.html"><i class="fa fa-tasks"></i>Insert New Product</a>
+                    </li>
+                    <li>
+                                <a class="active-menu" href="view_products.html"><i class="fa fa-envelope"></i>View All Product</a>
+                     </li>
+                    <li>
+                        <a href="login.html" onClick="logout()"><i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav><!-- /. NAV SIDE  -->
+    
+    
+		<div id="page-wrapper" >
+            <div id="page-inner">
+			 <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Manage Products<small>View Product</small>
+                        </h1>
+                    </div>
+                </div> 
+                 <!-- /. ROW  -->
+				 
+				
+			<div class="row">
+
+			  <div class="col-md-12">
+			<div class="panel panel-default">
+							  
+							<div class="panel-body"> 
+								<table width="990px" align="center" bgcolor="pink" id="table_my">
+									<tr align="center">
+    									<td colspan="10" bgcolor="#3498db"><h2>View All Products Here</h2><br /></td>
+    								</tr>
+
+                                    <tr align="center" bgcolor="skyblue" style>
+                                        <th width="50px">S.N</th>
+                                        <th> Title </th>
+                                        <th> Image </th>
+                                        <th> Description </th>
+                                         <th> Sell Price </th>
+                                         <th> Real Price </th>
+                                        <th> Edit </th>
+                                        <th> Delete </th>
+                                    </tr>
+                                    
+                                      		<!--<td> <a href="edit_pro.php?edit_pro=<?php echo $Product_id; ?>">Edit </a></td>
+                                        	<td><a href="delete_pro.php?delete_pro=<?php echo $Product_id;?>">Delete</a></td>-->
+                                    </table>
+                                   
+<!--                                        <td>1</td>
+                                        	<td id="tb_name"> </td>
+                                         	<td id="tb_img"> <img width="60" height="60"></td>
+                                         	<td id="tb_dis"> </td>
+                                          	<td id="tb_sp"> </td>
+                                         	<td id="tb_rp"> </td>
+                                      		<td> <a href="edit_pro.php?edit_pro=<?php echo $Product_id; ?>">Edit </a></td>
+                                        	<td><a href="delete_pro.php?delete_pro=<?php echo $Product_id;?>">Delete</a></td>-->
+                                        
+                                   	
+									
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC4JzCVg74e7XzXXZAfcKVmjRqzkSdZcxg",
+    authDomain: "demofirebase-d4961.firebaseapp.com",
+    databaseURL: "https://demofirebase-d4961.firebaseio.com",
+    projectId: "demofirebase-d4961",
+    storageBucket: "demofirebase-d4961.appspot.com",
+    messagingSenderId: "384675894140"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="index.js"></script>
+<script src="view_product.js"></script>
+
+</body>
+</html>

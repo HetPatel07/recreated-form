@@ -1,0 +1,75 @@
+/*
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+/*h4, h5, h6,
+h1, h2, h3 {margin: 0;}
+ul, ol {margin: 0; padding:0;}
+p {margin: 0;}
+html, body
+{
+	font-family: 'Raleway', sans-serif;
+	font-size: 100%;
+	background: #ffffff;
+}
+body
+{
+	background-color:#72DEF1;
+	margin:0;
+	padding:0;
+	height:775px;
+	background:skyblue;
+}*/
+/*.main_wrapper
+{
+	width:1000px;
+	height:auto;
+	margin:auto;
+}
+
+#header
+{
+	width:1000px;
+	height:175px;
+	background-image:url(../images/admin-header.jpg);
+	border-bottom:5px groove orange;
+}
+*/
+#left
+{
+	width:795px;
+	height:600px;
+	background-image:url(../images/cooltext222030553136341.gif);
+	background-repeat:no-repeat;
+	background-color:#FFFFFF;
+	background-position:center;
+	float:left;
+}
+
+/*#right
+{
+	width:200px;
+	height:600px;
+	float:right;
+	border-left:5px groove orange;
+	background:#CC3333;
+}
+#right a
+{
+	text-decoration:none;
+	color:#FFFFFF;
+	text-align:left;
+	font-size:18px;
+	font-family:Palatino;
+	padding:6px;
+	margin:6px;
+	display:block;
+}
+#right a:hover
+{
+	text-decoration:underline;
+	font-weight:bold;
+	color:#0000FF;
+}*/

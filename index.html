@@ -1,0 +1,126 @@
+ 
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login_css.css" media="all" />
+    <style>
+        input{
+            box-shadow: inset 1px 0px 10px 0px rgba(100,100,100,0.2);
+            text-shadow: none;
+            font-size: 16px;
+        }
+        input:focus{
+            box-shadow: inset 1px 0px 10px 0px rgba(100,100,100,0.2);
+        }
+        .forgot-grid {
+    margin-top: 1.2em;
+}
+        
+        h1{
+          font-size: 50px;
+            font-weight: 100;
+            color: #232323 !important;
+            margin: 30px 0 60px 0;
+        }
+.forgot {
+    float: right;
+}
+.forgot a {
+    font-size: 1em;
+    color: #555;
+    display:block;
+}
+.forgot a:hover{
+    color: #e94e02;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+        form input{
+            padding: 15px !important;
+            background-color: #fff;
+            width: 100%;
+            margin-top: 10px;
+            color: #232323;
+        }
+        form button{
+            color: #232323;
+            padding: 10px !important;
+            transition: .3s all;
+            font-size: 20px !important;
+            margin-top: 10px;
+            border: 2px solid #2196F3 !important;
+            background-color: #2196F3 !important;
+            background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)) !important;
+        }
+        form button:hover{
+            background-color: #2196F3 !important;
+            transition: .3s all !important;
+            opacity: .8;
+        }
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: SSrotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+        
+</style>
+</head>
+
+<body>
+    <div class="login">
+        <!--        <div align="center"> <img src="images/logo.jpg" width="249" height="185" align="texttop"> </div>-->
+        <h1>Log in</h1>
+        <form action="">
+            <input type="text" name="email" placeholder="xyz@email.com" id="login_email" />
+            <span id="msg1" style="color:red; font-weight:bold;"></span>
+
+            <input type="password" name="password" placeholder="Password" maxlength="10" id="login_password">
+            <span id="msg2" style="color:red; font-weight:bold;"></span>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large" name="login" onClick="login()">Login</button>
+            <!--<button type="submit" class="btn btn-primary btn-block btn-large" 
+        	    name="login" onClick="logout()">Logout</button>
+    		<!--<div class="forgot-grid">
+				<div class="forgot">
+					<a href="forget_pswd.php">Forgot Password?</a>
+				</div>
+			</div>-->
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC4JzCVg74e7XzXXZAfcKVmjRqzkSdZcxg",
+    authDomain: "demofirebase-d4961.firebaseapp.com",
+    databaseURL: "https://demofirebase-d4961.firebaseio.com",
+    projectId: "demofirebase-d4961",
+    storageBucket: "demofirebase-d4961.appspot.com",
+    messagingSenderId: "384675894140"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="login.js"></script>
+
+
+
+</body>
+</html>

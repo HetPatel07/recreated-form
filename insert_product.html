@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inserting Product</title>
+	<!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <link href="style/style.css" rel="stylesheet" />
+        <link href="style2/insert_css.css">
+		<!--<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  		<script>tinymce.init({ selector:'textarea' });</script>-->
+        <link rel="stylesheet" href="style2/insert_css.css">
+		<!--<link href="../css/bootstrap.css" rel="stylesheet" type="text/css">-->
+<style> 
+.button
+{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active 
+{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" >Admin Panel</a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li onClick="logout()"><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                   <li>
+                        <a   href="home.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+                   
+                    <li>
+                                <a class="active-menu" href="insert_product.html"><i class="fa fa-tasks"></i>Insert New Product</a>
+                    </li>
+                    <li>
+                                <a href="view_products.html"><i class="fa fa-envelope"></i>View All Product</a>
+                     </li>
+                    <li>
+                        <a href="login.html" onClick="logout()"><i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav><!-- /. NAV SIDE  -->
+    
+    
+        <div id="page-wrapper" >
+            <div id="page-inner">
+			 <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                           Insert New Product
+                        </h1>
+                    </div>
+                </div> 
+                 <!-- /. ROW  -->
+				 
+				
+			<div class="row">
+
+			  <div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+				 Insert Product
+				</div>        
+							  
+							<div class="panel-body"> 
+<!--<form action="insert_product.html" method="post" enctype="multipart/form-data" name="fn">-->
+        	<table align="center" width="990px" height="645px" bgcolor="#E67E19">
+            	<tr align="center">
+                	<td colspan="7">
+                    	<div id="box">
+                    		<div class="box-top" id="text">Insert New Product Here</div>
+                         </div>  
+                   </td>
+                </tr>
+                
+                <tr>
+                	<td id="title"><b>Product Title:</b></td>
+                    <td>
+                    <input type="text" id="pt" name="Product_name" size="60px;" placeholder="Enter Product Name" />
+                    	<span id="msg1" style="color:red; font-weight:bold;"></span>                    
+                 	</td>
+                </tr>
+
+				<tr>
+                	<td id="title" ><b>Product Category:</b></td>
+                    <td>
+                   		 <select name="Product_cat" class="selectpicker" id="product_cat" >
+                        	<option>Select a Category</option>
+                          	<option value="Plants">Plants</option>
+                            <option value="Pots">Pots</option>
+                            <option value="Fertilizer">Fertilizer</option>
+                            <option value="Pesticide">Pesticide</option>
+                        </select>
+                        <span id="msg2" style="color:red; font-weight:bold;"></span>                    
+                 	</td>
+                    </tr>
+                    <tr>
+                	<td id="title"><b>Product Sub Category:</b></td>
+                    <td>
+                    	<select name="Product_sub_cat" class="selectpicker" id="product_sub_cat" multiple >
+                        	<option value="">Select a SubCategory</option>
+
+                           	<option value="Indoor_Plants" >Indoor Plant</option>
+                            <option value="Outdoor_Plants" >Outdoor Plant</option>
+                            <option value="Artifical_Plants">Artificial Plant</option>
+                            <option value="Flowering_Plants">Flowering Plant</option>
+                            <option value="Sessional_Plants">Sessional Plant</option>
+                            <option value="Fruit_Plants">Fruit Plants</option>
+                            <option value="Gifted_Plants">Gifted Plant</option>
+                            <option value="Wedding_Plants">Wedding Plant</option>
+                        </select>
+                        <span style="color:red">Hold down the Ctrl button to select multiple options</span>
+                        <span id="msg3" style="color:red; font-weight:bold;"></span>                   
+                  	</td>
+                </tr>
+                <tr>
+                	<td id="title"><b>Product Image:</b></td>
+                    <td><input type="file" name="Product_image" id="img1" />
+                    	<span id="msg5" style="color:red; font-weight:bold;"></span>                    
+                    <input type="file" name="Product_image1" id="img2" />
+                    	<span id="msg51" style="color:red; font-weight:bold;"></span>         
+                   	<input type="file" name="Product_image2" id="img3" />
+                    	<span id="msg52" style="color:red; font-weight:bold;"></span>         
+                   	<input type="file" name="Product_image3" id="img4" />
+                    	<span id="msg53" style="color:red; font-weight:bold;"></span>         
+                   	</td>
+                
+                </tr>
+				
+                <tr>
+                	<td id="title"><b>Product Sell Price:</b></td>
+                    <td>
+                    <input type="text" name="Product_sell_price" placeholder="Enter Product Sell Price" id="psp" />
+                    <span id="msg6" style="color:red; font-weight:bold;"></span>                    </td>
+                </tr>
+                <tr>
+                	<td id="title"><b>Product Real Price:</b></td>
+                    <td><input type="text" name="Product_real_price" placeholder="Enter Product Real Price" id="prp" />
+                    <span id="msg61" style="color:red; font-weight:bold;"></span>                    
+                    </td>
+                </tr>
+					
+                <tr>
+                	<td id="title"><b>Product Description:</b></td>
+                    <td><textarea name="Product_desc" cols="50" rows="10" placeholder="Write Here....." id="ds"></textarea>
+                     		<span id="msg7" style="color:red; font-weight:bold;"></span>                    
+                   	</td>
+                </tr>               
+                <tr align="center">
+                       <td colspan="7">
+                            <input type="submit" name="insert_post" value="Insert Product Now" class="button" onClick="add();" />
+        					<!--<input type="reset" name="insert_post" value="Reset" class="button" />-->
+                       </td>
+                </tr>
+        
+            </table>
+            <br>
+            <div>
+            	<button><a href="index.html" style="text-decoration:none; color:#000000;">Go to Home</a></button>
+            </div>				
+	        </form>
+        </div>
+		</div>
+		</div>						
+		</div>								
+		</div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+      <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+ 
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC4JzCVg74e7XzXXZAfcKVmjRqzkSdZcxg",
+    authDomain: "demofirebase-d4961.firebaseapp.com",
+    databaseURL: "https://demofirebase-d4961.firebaseio.com",
+    projectId: "demofirebase-d4961",
+    storageBucket: "demofirebase-d4961.appspot.com",
+    messagingSenderId: "384675894140"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="index.js"></script>
+<script src="insert_product.js"></script>
+</body>
+</html>
